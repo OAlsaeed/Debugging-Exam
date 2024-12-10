@@ -11,7 +11,7 @@ module tb_counter_4bit;
      logic [3:0] count;
      
      
-     counter_4bit uut(
+     counter_4bit2 uut(
      
       .clk(clk),
       .reset_n(reset_n),
@@ -26,7 +26,7 @@ clk =0;
 reset_n=1;
 load =0;
 load_data=2;
-forever #2 clk = ~clk;
+forever #3 clk = ~clk;
 
     end
     
@@ -35,7 +35,7 @@ forever #2 clk = ~clk;
     #5
     reset_n =0;
     #10
-    reset_n=1;
+    reset_n=0;
     #200
     load=1;
      
